@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Order Now | Mihu Beauty</title>
+
+<meta name="description" content="Order Mihu Beauty skincare products online. Face Beauty Whitening Cream and Hand & Foot Cream with Cash on Delivery available.">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Order Mihu Beauty Products</h1>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<section class="order">
+
+<h2>Place Your Order</h2>
+
+<form>
+
+<label>Full Name</label><br>
+<input type="text" placeholder="Enter your full name" required><br><br>
+
+<label>Phone Number</label><br>
+<input type="text" placeholder="Enter phone number" required><br><br>
+
+<label>Delivery Address</label><br>
+<input type="text" placeholder="Enter delivery address" required><br><br>
+
+<label>Select Product</label><br>
+<select required>
+
+<option>Mihu Face Beauty Whitening Cream</option>
+<option>Mihu Hand & Foot Cream</option>
+<option>Mihu Combo Pack</option>
+
+</select><br><br>
+
+<label>Quantity</label><br>
+<input type="number" min="1" value="1"><br><br>
+
+<label>Payment Method</label><br>
+
+<select>
+
+<option>Cash on Delivery</option>
+<option>EasyPaisa</option>
+<option>JazzCash</option>
+<option>Bank Transfer</option>
+
+</select><br><br>
+
+<button type="submit">Place Order</button>
+
+</form>
+
+</section>
+
+
+<section class="whatsapp">
+
+<h3>Order Directly on WhatsApp</h3>
+
+<p>If you prefer, you can also place your order directly on WhatsApp.</p>
+
+<a href="https://wa.me/923019636603">
+<button>Order on WhatsApp</button>
+</a>
+
+</section>
+
+
+<footer>
+
+<a href="privacy.html">Privacy Policy</a>
+
+<a href="terms.html">Terms & Conditions</a>
+
+<p>© 2026 Mihu Beauty</p>
+
+</footer>
+
+</body>
+
+</html>
