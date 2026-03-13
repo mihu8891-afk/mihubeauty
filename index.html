@@ -1,53 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Mihu Beauty</title>
+<meta charset="UTF-8">
+<title>Mihu Beauty Official</title>
+<meta name="description" content="Mihu Beauty skincare products including Face Whitening Cream and Hand & Foot Cream. Get glowing skin with premium skincare.">
+<meta name="keywords" content="Mihu Beauty, Face Whitening Cream, Hand Foot Cream, Skincare Pakistan, Beauty Cream, Glowing Skin">
+<meta name="author" content="Mihu Beauty">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mihu Beauty Skincare">
+<meta property="og:description" content="Premium skincare products for glowing and healthy skin.">
+<meta property="og:type" content="website">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Organization",
+"name":"Mihu Beauty",
+"url":"https://yourusername.github.io/mihubeauty",
+"logo":"https://i.ibb.co/yourlogo.png",
+"sameAs":[
+"https://www.facebook.com/share/1CNgfPttsv/",
+"https://www.instagram.com/mihoo_collection",
+"https://tiktok.com/@skincarewithmihu8891",
+"https://youtube.com/@mihu88-k5g",
+"https://pin.it/7akZvjLYh",
+"https://x.com/earnspot1000"
+]
+}
+</script>
+
 <style>
-body{
-font-family: Arial;
-text-align:center;
-background:#fff5f7;
-}
-
-.header{
-background:#ff5c8a;
-color:white;
-padding:40px;
-}
-
-.product{
-margin:40px;
-}
-
-button{
-background:#ff5c8a;
-color:white;
-padding:15px 25px;
-border:none;
-font-size:18px;
-border-radius:8px;
-}
+body{font-family:Arial;margin:0;background:#fff5f7;text-align:center;}
+header{background:#ff4d8d;color:white;padding:40px;}
+nav a{margin:10px;color:white;text-decoration:none;font-weight:bold;}
+nav a:hover{color:#ffe0ea;}
+.hero{padding:80px;background:#ffe0ea;}
+.btn,.buy-btn{background:#ff4d8d;color:white;padding:15px 30px;border-radius:6px;text-decoration:none;font-weight:bold;}
+.btn:hover,.buy-btn:hover{background:#ff3b70;}
+.products,.order,.gallery,.reviews,.social,.trust,.benefits,.cta{padding:60px;}
+.product-card,.review{background:white;padding:20px;margin:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.product-card img{width:150px;border-radius:10px;margin-bottom:10px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px;}
+.gallery-grid img{width:100%;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+input,select{padding:12px;margin:10px;width:250px;}
+button{background:#ff4d8d;color:white;padding:15px 30px;border:none;border-radius:5px;}
+footer{background:#222;color:white;padding:20px;}
+footer a{color:white;text-decoration:none;margin:10px;font-weight:bold;}
+footer a:hover{color:#ff4d8d;}
+.social a{margin:10px;text-decoration:none;font-weight:bold;color:#333;}
+.social a:hover{color:#ff4d8d;}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:1000;}
+.whatsapp-float:hover{background:#1ebc59;}
 </style>
 </head>
 
 <body>
 
-<div class="header">
-<h1>Mihu Beauty</h1>
-<p>Glow from Face to Feet</p>
+<header>
+<h1>MIHU BEAUTY</h1>
+<p>Glow From Face To Feet</p>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#blog">Blog</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h2>Get Soft, Bright & Glowing Skin</h2>
+<p>Premium skincare cream designed for daily beauty care.</p>
+<a href="#order" class="btn">Order Now</a>
+</section>
+
+<section class="products" id="products">
+<h2>Our Products</h2>
+
+<div class="product-card">
+<img src="https://i.ibb.co/facecream.png" alt="Mihu Face Beauty Whitening Cream">
+<h3>Mihu Face Beauty Whitening Cream</h3>
+<p>Brightens skin and keeps your face soft, smooth and glowing.</p>
+<p>Price: PKR 499 / $2</p>
+<a href="#order" class="buy-btn">Buy Now</a>
 </div>
 
-<div class="product">
-<h2>Mihu Face Beauty Whitening Cream</h2>
-<p>Brightens skin and keeps it soft & glowing.</p>
-<button>Order Now</button>
+<div class="product-card">
+<img src="https://i.ibb.co/handfoot.png" alt="Mihu Hand & Foot Cream">
+<h3>Mihu Hand & Foot Cream</h3>
+<p>Deep hydration for dry hands and rough feet.</p>
+<p>Price: PKR 799 / $3</p>
+<a href="#order" class="buy-btn">Buy Now</a>
 </div>
 
-<div class="product">
-<h2>Mihu Hand & Foot Cream</h2>
-<p>Moisturizes dry hands and feet.</p>
-<button>Order Now</button>
+</section>
+
+<section class="gallery" id="gallery">
+<h2>Our Products Gallery</h2>
+<div class="gallery-grid">
+<img src="https://i.ibb.co/facecream.png" alt="Face Whitening Cream">
+<img src="https://i.ibb.co/handfoot.png" alt="Hand & Foot Cream">
+<img src="https://i.ibb.co/product3.png" alt="Mihu Product 3">
+<img src="https://i.ibb.co/product4.png" alt="Mihu Product 4">
 </div>
+</section>
+
+<section class="reviews" id="reviews">
+<h2>Customer Reviews</h2>
+<div class="review">
+<p>"Amazing cream! My skin feels soft and glowing after using Mihu Beauty Cream."</p>
+<h4>- Ayesha Khan</h4>
+</div>
+<div class="review">
+<p>"Best hand and foot cream I have used. Very moisturizing and smooth."</p>
+<h4>- Sara Ali</h4>
+</div>
+<div class="review">
+<p>"I love this skincare product. Highly recommended!"</p>
+<h4>- Fatima Noor</h4>
+</div>
+</section>
+
+<section class="trust">
+<h2>Why Customers Trust Mihu Beauty</h2>
+<ul>
+<li>✔ Cash on Delivery Available</li>
+<li>✔ Premium Skincare Quality</li>
+<li>✔ Trusted by Customers</li>
+<li>✔ Fast Customer Support</li>
+</ul>
+</section>
+
+<section class="order" id="order">
+<h2>Place Your Order</h2>
+<form action="https://formspree.io/f/xxxxabcd" method="POST">
+<input type="text" name="name" placeholder="Full Name" required><br>
+<input type="text" name="phone" placeholder="Phone Number" required><br>
+<input type="text" name="address" placeholder="Delivery Address" required><br>
+<select name="product">
+<option>Mihu Face Beauty Whitening Cream - PKR 499 / $2</option>
+<option>Mihu Hand & Foot Cream - PKR 799 / $3</option>
+<option>Combo Pack</option>
+</select><br>
+<input type="number" name="quantity" min="1" value="1"><br>
+<select name="payment">
+<option>Cash on Delivery</option>
+<option>EasyPaisa</option>
+<option>JazzCash</option>
+<option>Bank Transfer</option>
+</select><br><br>
+<button type="submit">Place Order</button>
+</form>
+<h3>Direct Payment Options</h3>
+<p>EasyPaisa / JazzCash / Bank Transfer available. After placing order, our team will contact you on WhatsApp for payment confirmation.</p>
+<a href="https://wa.me/923019636603" class="buy-btn">Order on WhatsApp</a>
+</section>
+
+<section class="about" id="about">
+<h2>About Mihu Beauty</h2>
+<p>Mihu Beauty is a skincare brand dedicated to helping people achieve soft, smooth, and glowing skin. Our products are carefully designed to provide daily hydration, nourishment, and beauty care for all skin types.</p>
+<p>Our mission is simple — to provide high-quality skincare products that help people feel confident and beautiful every day.</p>
+</section>
+
+<section class="blog" id="blog">
+<h2>Latest Skincare Articles</h2>
+<div class="review">
+<h3>Daily Skincare Routine for Glowing Skin</h3>
+<p>Cleanse your face daily, apply moisturizer, and protect your skin from dryness to maintain a natural glow.</p>
+</div>
+<div class="review">
+<h3>Benefits of Using Face Cream Daily</h3>
+<p>Using a face cream regularly helps keep skin hydrated and smooth. It can improve skin texture and support a healthy skincare routine.</p>
+</div>
+<div class="review">
+<h3>How to Care for Dry Hands and Feet</h3>
+<p>Using a nourishing hand and foot cream can help maintain soft and smooth skin.</p>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<p>WhatsApp: +923019636603</p>
+<p>Email: mihu8891@gmail.com</p>
+</section>
+
+<section class="social">
+<h2>Follow Mihu Beauty</h2>
+<a href="https://www.facebook.com/share/1CNgfPttsv/" target="_blank">Facebook</a> |
+<a href="https://www.instagram.com/mihoo_collection?igsh=M3hsa2xrZXRhdXJ3" target="_blank">Instagram</a> |
+<a href="https://tiktok.com/@skincarewithmihu8891" target="_blank">TikTok</a> |
+<a href="https://youtube.com/@mihu88-k5g?si=hhqA6Nc8XbOlY3oa" target="_blank">YouTube</a> |
+<a href="https://pin.it/7akZvjLYh" target="_blank">Pinterest</a> |
+<a href="https://x.com/earnspot1000" target="_blank">X (Twitter)</a>
+</section>
+
+<footer>
+<a href="#privacy">Privacy Policy</a> |
+<a href="#terms">Terms & Conditions</a>
+<p>© 2026 Mihu Beauty</p>
+</footer>
+
+<a href="https://wa.me/923019636603" class="whatsapp-float" target="_blank">Chat on WhatsApp</a>
 
 </body>
 </html>
