@@ -184,4 +184,392 @@ nav a:hover::after{width:100%}
 .contact-detail-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:2px}
 .contact-detail-value{font-size:.95rem;color:var(--espresso);font-weight:500;text-decoration:none}
 .contact-detail-value:hover{color:var(--rose)}
-.social-title{font-family:'
+.social-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--espresso);margin-bottom:24px}
+.social-grid{display:flex;flex-wrap:wrap;gap:12px}
+.social-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:2px;border:1.5px solid var(--border);text-decoration:none;font-size:.78rem;font-weight:600;color:var(--espresso);letter-spacing:.06em;text-transform:uppercase;background:#fff;transition:all .25s}
+.social-btn:hover{border-color:var(--rose);color:var(--rose);transform:translateY(-2px)}
+footer{background:var(--espresso);color:rgba(255,255,255,.5);padding:40px 80px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;font-size:.8rem}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--gold-light)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.4);text-decoration:none;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);animation:pulse 2.5s ease-in-out infinite;transition:transform .2s}
+.wa-float:hover{transform:scale(1.1)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 40px rgba(37,211,102,.7)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1000px){
+  header{padding:0 24px}
+  nav{display:none}
+  nav.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--warm-white);padding:24px;border-bottom:1px solid var(--border);gap:20px;z-index:99}
+  .hamburger{display:flex}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:60px 24px 40px}
+  .hero-right{min-height:380px}
+  .products-section,.reviews-section,.order-section,.about-section,.blog-section{padding:60px 24px}
+  .benefits-section{padding:60px 24px;grid-template-columns:1fr}
+  .order-grid{grid-template-columns:1fr}
+  .about-values{grid-template-columns:1fr 1fr}
+  .contact-section{grid-template-columns:1fr;padding:60px 24px}
+  footer{padding:30px 24px;flex-direction:column;text-align:center}
+  .trust-bar{gap:24px;padding:20px 24px}
+  .combo-card{flex-direction:column;text-align:center}
+  .promo-overlay{padding:24px}
+}
+@media(max-width:560px){
+  .hero h1{font-size:2.2rem}
+  .hero-actions{flex-direction:column}
+  .btn-primary,.btn-secondary{width:100%;justify-content:center}
+  .about-values{grid-template-columns:1fr}
+  .order-form-wrap{padding:28px 20px}
+  .hero-stats{gap:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="announcement">
+  🚚 Free delivery on orders above <span>PKR 1,500</span> &nbsp;·&nbsp; Cash on Delivery Available &nbsp;·&nbsp; <span>Binance Pay · USDT · Crypto Accepted</span>
+</div>
+
+<header>
+  <div class="logo">
+    <span class="logo-main">MIHU</span>
+    <span class="logo-tag">Beauty · Skincare</span>
+  </div>
+  <nav id="main-nav">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#order" class="nav-cta">Order Now</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO — Image 1: hero_banner.jpg fills the right panel -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-badge">Premium Skincare · Est. 2024</div>
+    <h1>Glow From<br><em>Face To Feet</em></h1>
+    <p class="hero-desc">Discover premium skincare crafted for radiant, hydrated, and luminous skin — every single day.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">Shop Now →</a>
+      <a href="#about" class="btn-secondary">Our Story</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">5K+</span><span class="stat-label">Happy Customers</span></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Natural Formula</span></div>
+      <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Average Rating</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="images/hero_banner.jpg" alt="Mihu Beauty — Glow From Face To Feet with Mihu Beauty Creams">
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🚚</span><span class="trust-text">Cash on Delivery</span></div>
+  <div class="trust-item"><span class="trust-icon">🌿</span><span class="trust-text">Natural Ingredients</span></div>
+  <div class="trust-item"><span class="trust-icon">⚡</span><span class="trust-text">Fast Delivery</span></div>
+  <div class="trust-item"><span class="trust-icon">💬</span><span class="trust-text">WhatsApp Support</span></div>
+  <div class="trust-item"><span class="trust-icon">₿</span><span class="trust-text">Crypto Accepted</span></div>
+</div>
+
+<!-- PRODUCTS — Image 2: facecream.jpg, Image 3: handfoot.jpg, Image 5: combo.jpg -->
+<section class="products-section reveal" id="products">
+  <div class="section-header center">
+    <span class="section-label">Our Collection</span>
+    <h2 class="section-title">Skincare You'll Love</h2>
+    <p class="section-sub">Each product is crafted to deliver visible results — from the first application.</p>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="product-badge">Bestseller</div>
+      <div class="product-img-wrap">
+        <img src="images/facecream.jpg" alt="Mihu Face Beauty Whitening Cream">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Face Care</div>
+        <h3 class="product-name">Mihu Face Beauty Whitening Cream</h3>
+        <div class="product-stars">★★★★★ <span>(248 reviews)</span></div>
+        <p class="product-desc">Brightens skin tone, reduces dark spots, and keeps your face soft, smooth and naturally glowing with daily use.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-pkr">PKR 499</span>
+            <span class="price-usd">≈ $2 USD</span>
+          </div>
+          <a href="https://wa.me/923019636603?text=Hi,%20I%20want%20to%20order%20Mihu%20Face%20Beauty%20Whitening%20Cream" class="buy-btn" target="_blank">💬 Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-badge" style="background:var(--sage)">Fan Favourite</div>
+      <div class="product-img-wrap">
+        <img src="images/handfoot.jpg" alt="Mihu Hand and Foot Cream">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Body Care</div>
+        <h3 class="product-name">Mihu Hand &amp; Foot Cream</h3>
+        <div class="product-stars">★★★★★ <span>(174 reviews)</span></div>
+        <p class="product-desc">Deep hydration formula for dry hands and rough feet. Heal cracked skin and restore softness overnight.</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-pkr">PKR 799</span>
+            <span class="price-usd">≈ $3 USD</span>
+          </div>
+          <a href="https://wa.me/923019636603?text=Hi,%20I%20want%20to%20order%20Mihu%20Hand%20%26%20Foot%20Cream" class="buy-btn" target="_blank">💬 Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="combo-card reveal">
+    <div class="combo-img">
+      <img src="images/combo.jpg" alt="Mihu Combo Pack">
+    </div>
+    <div class="combo-info">
+      <span class="combo-tag">✦ Limited Offer</span>
+      <div class="combo-title">Ultimate Glow Combo Pack</div>
+      <div class="combo-desc">Face Whitening Cream + Hand &amp; Foot Cream — everything you need for head-to-toe luminous skin.</div>
+    </div>
+    <div class="combo-price-box">
+      <span class="combo-old-price">PKR 1,298</span>
+      <span class="combo-new-price">PKR 1,099</span>
+      <span class="combo-save">Save PKR 199</span>
+    </div>
+    <a href="https://wa.me/923019636603?text=Hi,%20I%20want%20to%20order%20the%20Mihu%20Combo%20Pack" class="combo-btn" target="_blank">💬 Order Combo</a>
+  </div>
+</section>
+
+<!-- BENEFITS — Image 4: face_ad.jpg as left visual -->
+<section class="benefits-section" id="benefits">
+  <div class="benefits-visual reveal">
+    <img src="images/face_ad.jpg" alt="Mihu Face Whitening Cream — Glow Hydrate Shine">
+  </div>
+  <div class="reveal">
+    <div class="section-header">
+      <span class="section-label">Why Mihu Beauty</span>
+      <h2 class="section-title">Skincare That<br>Actually Works</h2>
+      <p class="section-sub">Our formulas are developed to deliver real, visible results for all skin types.</p>
+    </div>
+    <div class="benefits-list">
+      <div class="benefit-item">
+        <span class="benefit-icon">✨</span>
+        <div><div class="benefit-title">Visible Results in 7 Days</div><div class="benefit-desc">Customers report brighter, smoother skin within the first week of consistent use.</div></div>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🌿</span>
+        <div><div class="benefit-title">Natural Ingredients</div><div class="benefit-desc">Formulated with gentle, skin-loving ingredients suitable for all skin types.</div></div>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">💧</span>
+        <div><div class="benefit-title">24-Hour Deep Hydration</div><div class="benefit-desc">Locks in moisture all day so your skin stays soft and supple from morning to night.</div></div>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🛡️</span>
+        <div><div class="benefit-title">Dermatologically Safe</div><div class="benefit-desc">Safe for daily use. No harmful bleaching agents or harsh chemicals.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section reveal" id="reviews">
+  <div class="section-header center">
+    <span class="section-label">Customer Love</span>
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-sub">Real results, real stories — from real Mihu Beauty customers.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Amazing cream! My skin feels so soft and glowing after just two weeks. I've tried many creams but this is truly different.</p>
+      <div class="reviewer"><div class="reviewer-avatar">A</div><div><div class="reviewer-name">Ayesha Khan</div><div class="reviewer-tag">Verified Buyer · Lahore</div></div></div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Best hand and foot cream ever. My heels were so cracked — after one week they're completely smooth. Highly recommend!</p>
+      <div class="reviewer"><div class="reviewer-avatar">S</div><div><div class="reviewer-name">Sara Ali</div><div class="reviewer-tag">Verified Buyer · Karachi</div></div></div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">I love this skincare brand! The face cream brightened my complexion so naturally. Fast delivery and great customer service too.</p>
+      <div class="reviewer"><div class="reviewer-avatar">F</div><div><div class="reviewer-name">Fatima Noor</div><div class="reviewer-tag">Verified Buyer · Islamabad</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO BANNER — Image 6: viral.jpg -->
+<section class="promo-banner reveal">
+  <img src="images/viral.jpg" alt="Mihu Face Whitening Cream — Limited Time Offer">
+  <div class="promo-overlay">
+    <a href="#order" class="promo-btn-red">⚡ Order Now — Limited Offer</a>
+    <a href="https://wa.me/923019636603?text=Hi,%20I%20saw%20your%20limited%20offer%20and%20want%20to%20order%20Mihu%20Cream" target="_blank" class="promo-btn-wa">💬 Order on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<section class="order-section reveal" id="order">
+  <div class="order-grid">
+    <div class="order-info">
+      <span class="section-label">Place Your Order</span>
+      <h2 class="section-title">Order Now,<br>Glow Tomorrow</h2>
+      <p class="section-sub">Fill the form or WhatsApp us directly. We confirm and dispatch within 24 hours.</p>
+      <div class="order-features">
+        <div class="order-feature"><div class="order-feature-icon">🚚</div>Cash on Delivery available nationwide</div>
+        <div class="order-feature"><div class="order-feature-icon">📦</div>Dispatch within 24 hours of order</div>
+        <div class="order-feature"><div class="order-feature-icon">💬</div>WhatsApp confirmation sent instantly</div>
+        <div class="order-feature"><div class="order-feature-icon">🔄</div>Easy exchange policy</div>
+        <div class="order-feature"><div class="order-feature-icon">💳</div>EasyPaisa · JazzCash · Bank Transfer</div>
+        <div class="order-feature"><div class="order-feature-icon">₿</div>Binance Pay · USDT · BTC · ETH</div>
+      </div>
+    </div>
+
+    <div class="order-form-wrap">
+      <div class="form-title">Place Your Order</div>
+      <form action="https://formspree.io/f/xxxxabcd" method="POST">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" name="name" placeholder="e.g. Ayesha Khan" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" name="phone" placeholder="+92 300 0000000" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Delivery Address</label>
+          <input type="text" name="address" placeholder="Street, City, Province" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Select Product</label>
+          <select name="product" class="form-input" required>
+            <option value="">Choose a product...</option>
+            <option>Mihu Face Beauty Whitening Cream — PKR 499</option>
+            <option>Mihu Hand &amp; Foot Cream — PKR 799</option>
+            <option>Ultimate Glow Combo Pack — PKR 1,099</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Quantity</label>
+          <input type="number" name="quantity" min="1" value="1" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Payment Method</label>
+          <select name="payment" class="form-input">
+            <optgroup label="Local Payments">
+              <option>Cash on Delivery</option>
+              <option>EasyPaisa</option>
+              <option>JazzCash</option>
+              <option>Bank Transfer</option>
+            </optgroup>
+            <optgroup label="Crypto Payments">
+              <option>Binance Pay</option>
+              <option>USDT (TRC-20 / ERC-20)</option>
+              <option>Bitcoin (BTC)</option>
+              <option>Ethereum (ETH)</option>
+            </optgroup>
+          </select>
+        </div>
+        <button type="submit" class="form-submit">✦ Place Order Now</button>
+      </form>
+
+      <div class="or-divider">or order via</div>
+      <a href="https://wa.me/923019636603?text=Hi,%20I%20want%20to%20place%20an%20order%20with%20Mihu%20Beauty" class="wa-order-btn" target="_blank">
+        💬 Order on WhatsApp
+      </a>
+
+      <div class="crypto-panel">
+        <div class="crypto-title">₿ Crypto Payments Accepted Worldwide</div>
+        <div class="crypto-methods">
+          <div class="c-item bn"><span class="c-icon">🟡</span><div><div class="c-name y">Binance Pay</div><div class="c-sub">Instant transfer</div></div></div>
+          <div class="c-item ud"><span class="c-icon">💚</span><div><div class="c-name g">USDT</div><div class="c-sub">TRC-20 / ERC-20</div></div></div>
+          <div class="c-item bt"><span class="c-icon">🟠</span><div><div class="c-name o">Bitcoin (BTC)</div><div class="c-sub">Global payments</div></div></div>
+          <div class="c-item et"><span class="c-icon">🔷</span><div><div class="c-name b">Ethereum (ETH)</div><div class="c-sub">ERC-20 network</div></div></div>
+        </div>
+        <div class="crypto-note">After placing your order, WhatsApp us to receive the wallet address for crypto payment confirmation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section reveal" id="about">
+  <span class="section-label">Our Story</span>
+  <h2 class="section-title">Born From a Passion<br>for Beautiful Skin</h2>
+  <p class="about-desc">Mihu Beauty was created with one mission — to bring premium, affordable skincare to everyone. We believe every person deserves to feel confident and radiant, and our products are formulated to make that possible every single day.</p>
+  <div class="about-values">
+    <div class="value-card reveal"><span class="value-icon">🌸</span><div class="value-name">Premium Quality</div><div class="value-desc">Every formula is crafted for maximum effectiveness and skin safety.</div></div>
+    <div class="value-card reveal"><span class="value-icon">💰</span><div class="value-name">Affordable for All</div><div class="value-desc">World-class skincare at prices that don't break the bank.</div></div>
+    <div class="value-card reveal"><span class="value-icon">🤝</span><div class="value-name">Customer First</div><div class="value-desc">Your satisfaction is our priority — always. No compromise.</div></div>
+    <div class="value-card reveal"><span class="value-icon">🌍</span><div class="value-name">Trusted Nationwide</div><div class="value-desc">Thousands of happy customers across Pakistan trust Mihu Beauty.</div></div>
+  </div>
+</section>
+
+<section class="blog-section reveal" id="blog">
+  <div class="section-header center">
+    <span class="section-label">Skincare Insights</span>
+    <h2 class="section-title">Beauty Tips &amp; Guides</h2>
+    <p class="section-sub">Expert skincare knowledge to help you glow from the inside out.</p>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card reveal"><div class="blog-img">🌅</div><div class="blog-content"><div class="blog-cat">Skincare Routine</div><div class="blog-title">Daily Skincare Routine for Glowing Skin</div><div class="blog-excerpt">Cleanse, moisturize, and protect. A simple daily routine is the foundation of radiant, healthy skin all year round.</div><a href="#blog" class="blog-read">Read Article →</a></div></div>
+    <div class="blog-card reveal"><div class="blog-img">✨</div><div class="blog-content"><div class="blog-cat">Face Care</div><div class="blog-title">Benefits of Using Face Cream Daily</div><div class="blog-excerpt">Consistent moisturizing builds your skin's natural barrier, improves texture, and reduces the appearance of fine lines.</div><a href="#blog" class="blog-read">Read Article →</a></div></div>
+    <div class="blog-card reveal"><div class="blog-img">💧</div><div class="blog-content"><div class="blog-cat">Body Care</div><div class="blog-title">How to Care for Dry Hands and Feet</div><div class="blog-excerpt">Seasonal dryness and cracking can be healed with the right nourishing cream applied regularly before sleep.</div><a href="#blog" class="blog-read">Read Article →</a></div></div>
+  </div>
+</section>
+
+<section class="contact-section reveal" id="contact">
+  <div class="contact-info">
+    <span class="section-label">Get In Touch</span>
+    <h2 class="section-title">We're Here<br>to Help You Glow</h2>
+    <p class="section-sub">Questions about products? Need order support? Reach out anytime.</p>
+    <div class="contact-items">
+      <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-detail-label">WhatsApp</div><a href="https://wa.me/923019636603" class="contact-detail-value">+92 301 9636603</a></div></div>
+      <div class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-detail-label">Email</div><a href="/cdn-cgi/l/email-protection#7e1317160b1c1b1f0b0a073e19131f1712501d1113" class="contact-detail-value"><span class="__cf_email__" data-cfemail="0b6662637e696e6a7e7f724b6c666a626725686466">[email&#160;protected]</span></a></div></div>
+    </div>
+  </div>
+  <div class="reveal">
+    <div class="social-title">Follow Our Journey</div>
+    <div class="social-grid">
+      <a href="https://www.facebook.com/share/1CNgfPttsv/" target="_blank" class="social-btn">📘 Facebook</a>
+      <a href="https://www.instagram.com/mihoo_collection" target="_blank" class="social-btn">📸 Instagram</a>
+      <a href="https://tiktok.com/@skincarewithmihu8891" target="_blank" class="social-btn">🎵 TikTok</a>
+      <a href="https://youtube.com/@mihu88-k5g" target="_blank" class="social-btn">▶️ YouTube</a>
+      <a href="https://pin.it/7akZvjLYh" target="_blank" class="social-btn">📌 Pinterest</a>
+      <a href="https://x.com/earnspot1000" target="_blank" class="social-btn">✖️ Twitter / X</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">MIHU BEAUTY</div>
+  <div class="footer-links">
+    <a href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a>
+    <a href="#contact">Contact</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a>
+  </div>
+  <div style="font-size:.75rem">© 2026 Mihu Beauty. All rights reserved.</div>
+</footer>
+
+<a href="https://wa.me/923019636603?text=Hi,%20I%20want%20to%20know%20more%20about%20Mihu%20Beauty" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+  hamburger.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 60);
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
